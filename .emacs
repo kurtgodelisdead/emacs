@@ -45,7 +45,6 @@
 ;; Long lines mode provides soft word wrapping instead of the slash c\rap
 (autoload 'longlines-mode "longlines.el" "Minor mode for automatically wrapping long lines." t)
 
-
 ;;;; Languages ;;;;
 
 ;; Ruby mode
@@ -209,6 +208,9 @@
 ;; Rename files
 (global-set-key "\C-cr" 'rename-file-and-buffer)
 
+
+;; Scroll one line at a time
+(setq scroll-step 1)
 
 ;; Putty
 
