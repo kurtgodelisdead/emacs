@@ -1,0 +1,17 @@
+--22:14:44--  http://downloads.sourceforge.net/php-mode/php-mode-1.4.0.tar.gz
+           => `php-mode-1.4.0.tar.gz'
+Resolving downloads.sourceforge.net... 66.35.250.203
+Connecting to downloads.sourceforge.net|66.35.250.203|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://superb-east.dl.sourceforge.net/sourceforge/php-mode/php-mode-1.4.0.tar.gz [following]
+--22:14:44--  http://superb-east.dl.sourceforge.net/sourceforge/php-mode/php-mode-1.4.0.tar.gz
+           => `php-mode-1.4.0.tar.gz'
+Resolving superb-east.dl.sourceforge.net... 209.160.66.130
+Connecting to superb-east.dl.sourceforge.net|209.160.66.130|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 35,672 (35K) [application/x-gzip]
+
+    0K .......... .......... .......... ....                 100%  394.20 KB/s
+
+22:15:25 (394.20 KB/s) - `php-mode-1.4.0.tar.gz' saved [35672/35672]
+
