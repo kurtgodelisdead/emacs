@@ -65,7 +65,7 @@
   :tag "JavaScript"
   :group 'languages)
 
-(defcustom javascript-indent-level 4
+(defcustom javascript-indent-level 2
   "Number of spaces for each indentation step."
   :type 'integer
   :group 'javascript)

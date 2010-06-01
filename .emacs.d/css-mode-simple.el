@@ -62,9 +62,9 @@
             (let ((keywords (regexp-opt
                              '("azimuth" "background" "background-attachment" "background-color"
                                "background-image" "background-position" "background-repeat"
-                               "border" "border-collapse" "border-color" "border-spacing"
-                               "border-style" "border-top" "border-right" "border-bottom"
-                               "border-left" "border-top-color" "border-right-color"
+                               "border" "border-radius" "border-collapse" "border-color" 
+                               "border-spacing" "border-style" "border-top" "border-right"
+                               "border-bottom" "border-left" "border-top-color" "border-right-color"
                                "border-bottom-color" "border-left-color" "border-top-style"
                                "border-right-style" "border-bottom-style" "border-left-style"
                                "border-top-width" "border-right-width" "border-bottom-width"

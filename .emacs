@@ -50,6 +50,9 @@
 ;; Ruby mode
 (load "~/.emacs.d/ruby/load")
 
+(require 'flymake-ruby)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+
 ;; Python mode
 (load "~/.emacs.d/python/load")
 
