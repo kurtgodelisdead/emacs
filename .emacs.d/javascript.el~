@@ -65,11 +65,7 @@
   :tag "JavaScript"
   :group 'languages)
 
-<<<<<<< HEAD:.emacs.d/javascript.el
-(defcustom javascript-indent-level 2
-=======
 (defcustom javascript-indent-level 4
->>>>>>> 525670820d3a42f636c24f03868e9709c4235b31:.emacs.d/javascript.el
   "Number of spaces for each indentation step."
   :type 'integer
   :group 'javascript)
