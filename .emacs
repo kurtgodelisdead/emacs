@@ -94,6 +94,13 @@
 ;; (autoload 'treetop-mode "treetop" nil t)
 ;; (add-to-list 'auto-mode-alist '("\\.treetop$" . treetop-mode))
 
+;; Haskell Mode
+
+(load "~/.emacs.d/haskell-mode-2.7.0/haskell-site-file")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(setq auto-mode-alist (cons '("\\.hs\\'" . haskell-mode) auto-mode-alist))
+
 
 ;; Add HTML & RHTML mode
 (setq auto-mode-alist (cons '("\\.html$" . html-mode) auto-mode-alist))
@@ -159,6 +166,9 @@
 ;; Disable Ctrl-Z (background this process in unix)
 (global-unset-key "\C-z")
 
+;; Instead, let \C-z kill emacs
+(global-set-key "\C-z" 'kill-emacs)
+
 ;; Copy text on insert
 (global-set-key [insertchar] 'ignore)
 
@@ -171,6 +181,10 @@
 
 ;; Set C-xg to replace-regexp
 (global-set-key "\C-xg" 'replace-regexp)
+
+;; For Cygwin : Let C-x C-c save buffers and kill emacs 
+;; Don't know why cygwin interprets C-x C-c as C-x C-g
+(global-set-key "\C-x \C-g" 'save-buffers-kill-emacs)
 
 
 (custom-set-variables
