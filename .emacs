@@ -87,8 +87,12 @@
 (add-to-list 'auto-mode-alist '("nginx.conf$" . nginx-mode))
 
 ;; CSS Mode
-(autoload 'css-mode "css-mode-simple")
-(setq auto-mode-alist (cons '("\\.css\\'" . css-mode) auto-mode-alist))
+
+;; First remove css-mode if it already exists
+(rassq-delete-all 'css-mode auto-mode-alist)
+
+(autoload 'css-mode "~/.emacs.d/css-mode-simple.el" nil t)
+(add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 
 ;; Treetop mode
 ;; (autoload 'treetop-mode "treetop" nil t)
