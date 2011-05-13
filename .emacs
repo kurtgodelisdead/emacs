@@ -210,6 +210,8 @@
 (global-set-key "\C-t" 'indent-region)
 
 
+(load "~/.emacs.d/git-status-message.el")
+
 ;; I think I got this from Yegge..
 (defun rename-file-and-buffer (new-name)
 	"Renames both current buffer and file it's visiting to NEW-NAME." 
@@ -234,36 +236,4 @@
 (setq scroll-step 1)
 
 ;; Putty
-
 (define-key global-map [select] 'end-of-line)
-
-;; Do I even use this?
-(defvar w3-fast-parse-tidy-program "/usr/bin/tidy")
-
-(defun w3-tidy-page (&optional buff)
-	"Use html tidy to clean up the HTML in the current buffer."
-	(interactive)
-	(save-excursion
-		(if buff
-				(set-buffer buff)
-			(setq buff (current-buffer)))
-		(widen)
-		(call-process-region (point-min) (point-max)
-												 w3-fast-parse-tidy-program
-												 t (list buff nil) nil ;nil nil nil;
-												 "--show-warnings" "no" 
-												 "--show-errors" "0" 
-												 "--force-output" "yes"
-												 "-quiet" "-clean" 
-												 "-bare" "-omit"
-												 "--drop-proprietary-attributes" "yes" 
-												 "--hide-comments" "yes"
-												 "--markup" "y"
-												 "--indent" "y"
-												 "--indent-spaces" "2"
-												 "--indent-attributes" "n"
-												 "--output-html" "y"
-												 "--tidy-mark" "n"
-												 )))
-
-
